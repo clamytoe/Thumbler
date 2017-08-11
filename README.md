@@ -8,6 +8,8 @@
 [![Twitter][twitter-image]][twitter-url]
 
 ## Installation
+> DISCLAIMER: Now I must admit that I am using [Anaconda](https://www.continuum.io/) so the only hurdle I had with this was installing [OpenCV](https://github.com/opencv/opencv.git). Everything else was already installed. So the following has not been verified to work.
+
 The usual will get you almost there:
 
 ```bash
