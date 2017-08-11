@@ -44,7 +44,10 @@ class Thumbler(object):
     def extract_faces(self):
         """Extracts the faces that were found in the images"""
         if self.found:
-            face_dir = path.join('thumbs', self.source_image.split('.')[0])
+            if '/' in self.source_image:
+                face_dir = path.join('thumbs', self.source_image.split('/')[-1].split('.')[0])
+            else:
+                face_dir = path.join('thumbs', self.source_image.split('.')[0])
             distutils.dir_util.mkpath(face_dir)
             img = Image.open(self.source_image)
             for n, face in enumerate(self.faces):
